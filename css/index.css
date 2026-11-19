@@ -1,0 +1,15 @@
+:root {
+    --Cream : #F6F3EB;
+    --Bone : #ECE7DC;
+    --Espresso : #231A16;
+    --Espresso-soft : #6E645E;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: var(--Cream);
+}
+
