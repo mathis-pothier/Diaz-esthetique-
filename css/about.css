@@ -1,0 +1,383 @@
+:root {
+    --Cream: #F6F3EB;
+    --Bone: #ECE7DC;
+    --Espresso: #231A16;
+    --Espresso-soft: #6E645E;
+    --Blue: #CFDCE3;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    background-color: var(--Cream);
+    color: var(--Espresso);
+    font-family: "Inter", sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    width: 100%;
+}
+
+.header nav {
+    display: flex;
+    gap: 35px;
+}
+
+.header nav a {
+    color: var(--Espresso);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    transition: 0.5s ease;
+}
+
+.header nav a:hover {
+    color: var(--Espresso-soft);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.headerSticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--Cream);
+    border-bottom: 1px solid rgba(28, 27, 26, 0.08);
+    padding: 14px 24px;
+}
+
+.headerSticky .logoLink {
+    font-family: "Noto Serif", serif;
+    font-weight: 200;
+    letter-spacing: 0.01em;
+    font-size: 28px;
+    color: var(--Espresso);
+    text-decoration: none;
+    transition: ease 0.5s;
+}
+
+.buttonHeader {
+    background-color: var(--Espresso);
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    color: var(--Cream);
+    border: none;
+    padding: 14px 28px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+
+.logoLink:hover {
+    color: var(--Espresso-soft);
+}
+
+.buttonHeader:hover {
+    background-color: var(--Espresso-soft);
+}
+
+.pageIntro {
+    padding: 110px 70px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-bottom: 1px solid rgba(35, 26, 22, 0.15);
+}
+
+.pageTag {
+    font-family: "Reenie Beanie", cursive;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--Espresso-soft);
+}
+
+.pageIntro h1 {
+    font-family: "Noto Serif", serif;
+    font-size: 96px;
+    font-weight: 150;
+    line-height: 92px;
+    letter-spacing: -0.015em;
+    max-width: 950px;
+}
+
+.pageIntro h1 span {
+    font-style: italic;
+}
+
+.pageIntro p {
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--Espresso-soft);
+    max-width: 480px;
+}
+
+.aboutStory {
+    padding: 120px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.aboutStoryImg {
+    display: flex;
+    gap: 20px;
+    width: 50%;
+}
+
+.aboutStoryImg img {
+    filter: grayscale(100%);
+    width: 50%;
+    height: 460px;
+    object-fit: cover;
+}
+
+.aboutStoryText {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 45%;
+    align-items: flex-start;
+}
+
+.aboutStoryText h2 {
+    font-family: "Noto Serif", serif;
+    font-size: 48px;
+    font-weight: 150;
+    line-height: 52px;
+}
+
+.aboutStoryText p {
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--Espresso-soft);
+}
+
+.buttonUnderline {
+    border: none;
+    position: relative;
+    padding-bottom: 8px;
+    background-color: var(--Cream);
+    cursor: pointer;
+    color: var(--Espresso);
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+}
+
+.buttonUnderline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--Espresso);
+    transform: scaleX(1);
+    transform-origin: center;
+    transition: transform 0.5s;
+}
+
+.buttonUnderline:hover::after {
+    transform: scaleX(0.30);
+}
+
+.valuesSection {
+    padding: 120px 70px;
+    background-color: var(--Bone);
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.valuesGrid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.valueCard {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 31%;
+    padding-top: 24px;
+    border-top: 1px solid var(--Espresso);
+}
+
+.valueCard span {
+    font-family: "Noto Serif", serif;
+    font-size: 18px;
+    color: var(--Espresso-soft);
+}
+
+.valueCard h3 {
+    font-family: "Noto Serif", serif;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+.valueCard p {
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--Espresso-soft);
+}
+
+.studioGallery {
+    padding: 120px 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.galleryRow {
+    display: flex;
+    gap: 24px;
+}
+
+.galleryRow figure {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 33.33%;
+}
+
+.galleryRow img {
+    filter: grayscale(100%);
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.galleryRow figcaption {
+    font-size: 12px;
+    color: var(--Espresso-soft);
+    letter-spacing: 0.04em;
+}
+
+.ctaBanner {
+    padding: 130px 70px;
+    background-color: var(--Bone);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+}
+
+.ctaBanner h2 {
+    font-family: "Noto Serif", serif;
+    font-size: 64px;
+    font-weight: 150;
+    line-height: 66px;
+    max-width: 780px;
+}
+
+.ctaBanner h2 span {
+    font-style: italic;
+}
+
+footer {
+    padding: 80px 70px;
+    border-top: 1px solid rgba(35, 26, 22, 0.15);
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.footerLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 380px;
+}
+
+.footerLeft p:first-child {
+    font-family: "Noto Serif", serif;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.footerLeft p:nth-child(2) {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--Espresso-soft);
+}
+
+.footerImages {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.footerImages img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.footerRight {
+    display: flex;
+    gap: 80px;
+}
+
+.visit, .explore, .follow {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footerRight h3 {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--Espresso-soft);
+}
+
+.visit p {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 180px;
+}
+
+.explore a {
+    text-decoration: none;
+    color: var(--Espresso);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+}
+
+.explore a:hover {
+    color: var(--Espresso-soft);
+}
+
+.socialMedia {
+    display: flex;
+    gap: 14px;
+}
+
+.socialMedia img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
